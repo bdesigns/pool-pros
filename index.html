@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gulp Starter Project</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="h_groupWrapper">
+            <div class="main-logo">
+                <svg>
+                    <title>PoolPros Logo</title>
+                    <use xlink:href="imgs/svg/svg.svg#poolpro-logo" />
+                </svg>
+            </div>
+            <a href="#" class="findaPro">
+                Find a pro
+                <svg class="map-icon">
+                    <title>Map Icon for Search Button</title>
+                    <use xlink:href="imgs/svg/svg.svg#map-icon" />
+                </svg>
+            </a>
+            <nav class="nav" role="navigation">
+                <ul class="navElement">
+                    <li class="navItem">
+                        <a href="#" class="navLink">Pools &amp; Spas</a>
+                        <svg class="icon-nextArrow">
+                            <title>Navigation Arrow used for decoration</title>
+                            <use xlink:href="imgs/svg/svg.svg#icon-nextArrow" />
+                        </svg>
+                    </li>
+                    <li class="navItem">
+                        <a href="#" class="navLink">Supplies</a>
+                        <svg class="icon-nextArrow">
+                            <title>Navigation Arrow used for decoration</title>
+                            <use xlink:href="imgs/svg/svg.svg#icon-nextArrow" />
+                        </svg>
+                    </li>
+                    <li class="navItem">
+                        <a href="#" class="navLink">Resources</a>
+                        <svg class="icon-nextArrow">
+                            <title>Navigation Arrow used for decoration</title>
+                            <use xlink:href="imgs/svg/svg.svg#icon-nextArrow" />
+                        </svg>
+                    </li>
+                    <li class="navItem">
+                        <a href="#" class="navLink">Services</a>
+                        <svg class="icon-nextArrow">
+                            <title>Navigation Arrow used for decoration</title>
+                            <use xlink:href="imgs/svg/svg.svg#icon-nextArrow" />
+                        </svg>
+                    </li>
+                </ul>
+            </nav>   
+            <div class="mobileNav__controls ir" alt="Graphic Image that displays on mobile devices to show where to click to open the navigation">
+                <span>Navigation Icon</span>
+                <svg class="icon_xClose">
+                    <title>Mobile Navigation close icon</title>
+                    <use xlink:href="imgs/svg/svg.svg#icon-closeX" />
+                </svg>
+            </div>
+        </div>
+    </header>
+    <section class="search-results">
+        <div class="filters">
+            <div class="wrapper_filtersCallout">
+                <fieldset>
+                    <legend>Filter Results
+                        <span class="fieldset-titleArrow ir">Arrow that points to filtered search results.
+                            <svg class="icon arrow-down">
+                                <title>Mobile Navigation close icon</title>
+                                <use xlink:href="imgs/svg/svg.svg#arrow-down" />
+                            </svg>
+                        </span>
+                    </legend>
+                    <ul class="filter_list">
+                        <li class="filter_item">
+                            <input type="checkbox" id="proService" name="offerService" value="Service Pro" /><label for="proService">Service</label>
+                        </li>
+                        <li class="filter_item">
+                            <input type="checkbox" id="proInstall" name="offerInstall" value="proInstall" /><label for="proInstall">Installation</label>
+                        </li>
+                        <li class="filter_item"><input type="checkbox" id="residential" name="offerResidential" value="residential" /><label for="residential">Residential</label>
+                        </li>
+                        <li class="filter_item">
+                            <input type="checkbox" id="commercial" name="offerCommercial" value="commercial" /><label for="commercial">Commercial</label><span class="questionMark">
+                                <svg class="icon-questionMark">
+                                    <title>Question mark image to show help</title>
+                                    <use xlink:href="imgs/svg/svg.svg#icon-questionMark" />
+                                </svg>
+                            </span>
+                        </li>
+                    </ul>
+                </fieldset>
+                <span class="search_callBack"><span>7</span> dealers in <span>28226</span></span>
+            </div>
+        </div>
+        <div class="results">
+            <ul class="listing">
+                <li class="item">
+                    <div class="detail">
+                        <h3 class="heading">Aqua Experts</h3>
+                        <a class="phone_contact" href="tel:+1.888.888.8888">
+                            <span class="icon-phone">
+                                <svg>
+                                    <title>Phone Image used to show phone number is clickable</title>
+                                    <use xlink:href="imgs/svg/svg.svg#icon-phone" />
+                                </svg>
+                            </span>
+                            <span class="tap">Tap to call</span>1.888.888.8888
+                        </a>
+                        <p class="email_contact">
+                            Can't talk now? Click below to send an email.
+                            <a href="#" class="button listing_button modal_open" alt="Click here to fill out a form to contact a Pro">
+                                <span class="icon-email">
+                                    <svg>
+                                        <title>Phone Image used to show phone number is clickable</title>
+                                        <use xlink:href="imgs/svg/svg.svg#icon-email" />
+                                    </svg>
+                                </span>
+                                <span>Contact this Pro</span>
+                            </a>
+                        </p>
+                        <p class="business_hours">
+                            <span class="strong">Business Hours</span>
+                            <span>Weekdays 7:00am - 7:00pm</span>
+                            <span>Saturdays 7:00am - 3:00pm</span>
+                            <span>Sundays Closed</span>
+                        </p>
+                        <div class="pro_filters">
+                            <ul class="pro_list">
+                                <li class="pro_item">
+                                    Installation Pro
+                                    <svg class="icon icon-star">
+                                        <title>Phone Image used to show phone number is clickable</title>
+                                        <use xlink:href="imgs/svg/svg.svg#icon-star" />
+                                    </svg>
+                                </li>
+                                <li class="pro_item">
+                                    Residential Pro
+                                    <svg class="icon icon-home">
+                                        <title>Phone Image used to show phone number is clickable</title>
+                                        <use xlink:href="imgs/svg/svg.svg#icon-home" />
+                                    </svg>
+                                </li>
+                                <li class="pro_item">
+                                    Service Pro
+                                    <svg class="icon icon-gear">
+                                        <title>Phone Image used to show phone number is clickable</title>
+                                        <use xlink:href="imgs/svg/svg.svg#icon-gear" />
+                                    </svg>
+                                </li>
+                                <li class="pro_item">
+                                    Commercial Pro
+                                    <svg class="icon icon-users">
+                                        <title>Phone Image used to show phone number is clickable</title>
+                                        <use xlink:href="imgs/svg/svg.svg#icon-users" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="detail">
+                        <h3 class="heading">Premium Pools & Spas
+                                of Charlotte</h3>
+                        <a class="phone_contact" href="tel:+1.888.888.8888">
+                            <span class="icon-phone">
+                                <svg>
+                                    <title>Phone Image used to show phone number is clickable</title>
+                                    <use xlink:href="imgs/svg/svg.svg#icon-phone" />
+                                </svg>
+                            </span>
+                            <span class="tap">Tap to call</span>1.888.888.8888
+                        </a>
+                        <p class="email_contact">
+                            Can't talk now? Click below to send an email.
+                            <a href="#" class="button listing_button modal_open" alt="Click here to fill out a form to contact a Pro">
+                                <span class="icon-email">
+                                    <svg>
+                                        <title>Phone Image used to show phone number is clickable</title>
+                                        <use xlink:href="imgs/svg/svg.svg#icon-email" />
+                                    </svg>
+                                </span>
+                                <span>Contact this Pro</span>
+                            </a>
+                        </p>
+                        <p class="business_hours">
+                            <span class="strong">Business Hours</span>
+                            <span>Weekdays 7:00am - 7:00pm</span>
+                            <span>Saturdays 7:00am - 3:00pm</span>
+                            <span>Sundays Closed</span>
+                        </p>
+                        <div class="pro_filters">
+                            <ul class="pro_list">
+                                <li class="pro_item">
+                                    Installation Pro
+                                    <svg class="icon icon-star">
+                                        <title>Phone Image used to show phone number is clickable</title>
+                                        <use xlink:href="imgs/svg/svg.svg#icon-star" />
+                                    </svg>
+                                </li>
+                                <li class="pro_item">
+                                    Residential Pro
+                                    <svg class="icon icon-home">
+                                        <title>Phone Image used to show phone number is clickable</title>
+                                        <use xlink:href="imgs/svg/svg.svg#icon-home" />
+                                    </svg>
+                                </li>
+                                <li class="pro_item">
+                                    Service Pro
+                                    <svg class="icon icon-gear">
+                                        <title>Phone Image used to show phone number is clickable</title>
+                                        <use xlink:href="imgs/svg/svg.svg#icon-gear" />
+                                    </svg>
+                                </li>
+                                <li class="pro_item">
+                                    Commercial Pro
+                                    <svg class="icon icon-users">
+                                        <title>Phone Image used to show phone number is clickable</title>
+                                        <use xlink:href="imgs/svg/svg.svg#icon-users" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>         
+                <li class="item">
+                    <div class="detail">
+                        <h3 class="heading">Carolina Pool Specialists</h3>
+                        <a class="phone_contact" href="tel:+1.888.888.8888">
+                            <span class="icon-phone">
+                                <svg>
+                                    <title>Phone Image used to show phone number is clickable</title>
+                                    <use xlink:href="imgs/svg/svg.svg#icon-phone" />
+                                </svg>
+                            </span>
+                            <span class="tap">Tap to call</span>1.888.888.8888
+                        </a>
+                        <p class="email_contact">
+                            Can't talk now? Click below to send an email.
+                            <a href="#" class="button listing_button modal_open" alt="Click here to fill out a form to contact a Pro">
+                                <span class="icon-email">
+                                    <svg>
+                                        <title>Phone Image used to show phone number is clickable</title>
+                                        <use xlink:href="imgs/svg/svg.svg#icon-email" />
+                                    </svg>
+                                </span>
+                                <span>Contact this Pro</span>
+                            </a>
+                        </p>
+                        <p class="business_hours">
+                            <span class="strong">Business Hours</span>
+                            <span>Weekdays 7:00am - 7:00pm</span>
+                            <span>Saturdays 7:00am - 3:00pm</span>
+                            <span>Sundays Closed</span>
+                        </p>
+                        <div class="pro_filters">
+                            <ul class="pro_list">
+                                <li class="pro_item">
+                                    Installation Pro
+                                    <svg class="icon icon-star">
+                                        <title>Phone Image used to show phone number is clickable</title>
+                                        <use xlink:href="imgs/svg/svg.svg#icon-star" />
+                                    </svg>
+                                </li>
+                                <li class="pro_item">
+                                    Residential Pro
+                                    <svg class="icon icon-home">
+                                        <title>Phone Image used to show phone number is clickable</title>
+                                        <use xlink:href="imgs/svg/svg.svg#icon-home" />
+                                    </svg>
+                                </li>
+                                <li class="pro_item">
+                                    Service Pro
+                                    <svg class="icon icon-gear">
+                                        <title>Phone Image used to show phone number is clickable</title>
+                                        <use xlink:href="imgs/svg/svg.svg#icon-gear" />
+                                    </svg>
+                                </li>
+                                <li class="pro_item">
+                                    Commercial Pro
+                                    <svg class="icon icon-users">
+                                        <title>Phone Image used to show phone number is clickable</title>
+                                        <use xlink:href="imgs/svg/svg.svg#icon-users" />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                        <div class="detail">
+                            <h3 class="heading">Premium Pools & Spas
+                                    of Charlotte</h3>
+                            <a class="phone_contact" href="tel:+1.888.888.8888">
+                                <span class="icon-phone">
+                                    <svg>
+                                        <title>Phone Image used to show phone number is clickable</title>
+                                        <use xlink:href="imgs/svg/svg.svg#icon-phone" />
+                                    </svg>
+                                </span>
+                                <span class="tap">Tap to call</span>1.888.888.8888
+                            </a>
+                            <p class="email_contact">
+                                Can't talk now? Click below to send an email.
+                                <a href="#" class="button listing_button modal_open" alt="Click here to fill out a form to contact a Pro">
+                                    <span class="icon-email">
+                                        <svg>
+                                            <title>Phone Image used to show phone number is clickable</title>
+                                            <use xlink:href="imgs/svg/svg.svg#icon-email" />
+                                        </svg>
+                                    </span>
+                                    <span>Contact this Pro</span>
+                                </a>
+                            </p>
+                            <p class="business_hours">
+                                <span class="strong">Business Hours</span>
+                                <span>Weekdays 7:00am - 7:00pm</span>
+                                <span>Saturdays 7:00am - 3:00pm</span>
+                                <span>Sundays Closed</span>
+                            </p>
+                            <div class="pro_filters">
+                                <ul class="pro_list">
+                                    <li class="pro_item">
+                                        Installation Pro
+                                        <svg class="icon icon-star">
+                                            <title>Phone Image used to show phone number is clickable</title>
+                                            <use xlink:href="imgs/svg/svg.svg#icon-star" />
+                                        </svg>
+                                    </li>
+                                    <li class="pro_item">
+                                        Residential Pro
+                                        <svg class="icon icon-home">
+                                            <title>Phone Image used to show phone number is clickable</title>
+                                            <use xlink:href="imgs/svg/svg.svg#icon-home" />
+                                        </svg>
+                                    </li>
+                                    <li class="pro_item">
+                                        Service Pro
+                                        <svg class="icon icon-gear">
+                                            <title>Phone Image used to show phone number is clickable</title>
+                                            <use xlink:href="imgs/svg/svg.svg#icon-gear" />
+                                        </svg>
+                                    </li>
+                                    <li class="pro_item">
+                                        Commercial Pro
+                                        <svg class="icon icon-users">
+                                            <title>Phone Image used to show phone number is clickable</title>
+                                            <use xlink:href="imgs/svg/svg.svg#icon-users" />
+                                        </svg>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    
+            </ul>
+        </div>
+    </section>
+    <div class="socialConnection">
+        <div class="main_logoFooter">
+            <svg>
+                <title>PoolPros Logo</title>
+                <use xlink:href="imgs/svg/svg.svg#poolpro-logo-footer" />
+            </svg>
+        </div>
+        <ul class="social">
+            <li class="social_list">Connect With Us</li>
+            <li class="social_list"><a href="#" class="social_item twitter">Twitter<svg>
+                <title>Twitter Social Logo</title>
+                <use xlink:href="imgs/svg/svg.svg#icon-twitter" />
+            </svg></a></li>
+            <li class="social_list"><a href="#" class="social_item facebook">Facebook<svg>
+                <title>Facebook Social Logo</title>
+                <use xlink:href="imgs/svg/svg.svg#icon-facebook" />
+            </svg></a></li>
+            <li class="social_list"><a href="#" class="social_item youTube">YouTube
+                
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="93 85 300 318">
+                    <title>YouTube Social Logo</title>
+                    <style>
+                      .youTube-2{clip-path:url(#SVGID_yt-2_);}
+                    </style>
+                    <path class="youTube-1"d="M362.8 259.4s-2.3-16-9.3-23.2c-9-9.3-19-9.3-23.5-9.8-32.8-2.4-82-2.4-82-2.4s-49.2 0-82 2.4c-4.6.5-14.6.5-23.5 9.8-7 7.1-9.3 23.2-9.3 23.2S131 278.2 131 297v17.7c0 18.9 2.3 37.7 2.3 37.7s2.3 16.1 9.3 23.2c9 9.3 20.7 9 25.9 10C187 387.4 248 388 248 388s49.2 0 82-2.4c4.6-.6 14.6-.6 23.5-10 7-7 9.3-23 9.3-23s2.3-19 2.3-37.8v-17.7c0-18.9-2.3-37.7-2.3-37.7m-47.5-56.7h-15v-8.6c-5.6 6.5-10.3 9.7-15.6 9.7-4.5 0-7.7-2.1-9.3-6-1-2.4-1.7-6.1-1.7-11.6v-62.7h15v64.3c.3 2.2 1.2 3 3.1 3 2.9 0 5.4-2.5 8.6-7v-60.3h14.9v79.2zm-52.6-53.3c0-8.5-1.7-14.8-4.7-18.8-4-5.5-10.2-7.7-16.4-7.7-7.1 0-12.5 2.2-16.5 7.7-3 4-4.7 10.4-4.7 18.8v28.2c0 8.4 1.4 14.3 4.5 18.2a21 21 0 0 0 33.5 0c3-4 4.3-9.8 4.3-18.2v-28.2zm-14.9 29.8c.8 7.8-1.6 11.7-6.2 11.7-4.7 0-7.1-3.9-6.3-11.7v-31.4c-.8-7.8 1.6-11.5 6.3-11.5s7 3.7 6.2 11.5v31.4zM204 159.6v43.1h-15.8v-43.1s-16.2-53-19.6-62.8h16.5l11 41.3 11-41.3h16.4L204 159.6z" clip-path="url(#SVGID_yt-2_)"/>
+                    <path d="M345.5 319.9v-16c0-8.5-1.6-14.6-4.6-18.6-4-5.3-9.6-8.2-16.8-8.2-7.2 0-12.9 2.9-17 8.2-3 4-4.8 10.5-4.8 18.9v27.4a29 29 0 0 0 5 18.1c4.1 5.4 9.8 8 17.2 8a19.6 19.6 0 0 0 20.5-17c.1-1.4.5-4.6.5-9.2v-2.2h-15v9.8c-.8 3.8-2.9 5.7-6.4 5.7-4.8 0-6.9-3.6-6.9-10.9v-14h28.3zm-28.3-20.5c0-7.3 2-9.3 6.8-9.3 4.7 0 6.6 2.2 6.6 9.4v8.6h-13.4v-8.7zM279.7 277c-5.2 0-10.4 3.2-15 8.9v-34.3h-14.1v105.1h14l.1-7.9c4.8 5.9 10 9 15 9 5.6 0 9.8-3.1 11.7-9 1-3.2 1.5-8.4 1.5-15.6v-31.4a55 55 0 0 0-1.9-15.6c-1.9-6-5.7-9.2-11.3-9.2m-1.7 57c0 7.8-1.8 10.8-6 10.8a11 11 0 0 1-7.3-3.6v-47.5a11 11 0 0 1 7.4-3.6c4 0 6 2.3 6 10.1V334zm-39.2 22.7H224v-8.6c-5.6 6.5-10.4 9.7-15.7 9.7-4.5 0-7.7-2.1-9.3-6-1-2.4-1.7-6.1-1.7-11.6v-62h15v63.6c.3 2.2 1.2 3 3.1 3 2.9 0 5.5-2.5 8.6-7v-59.5h15v78.4z" class="youTube-2"/>
+                    <path d="M182.3 356.7h-15.7v-90.2h-16.4v-14.9h49.4v14.9h-17.3z" class="youTube-2"/>
+                  
+            </svg></a></li>
+        </ul>
+    </div>
+    <div class="global_toolBar">
+        <div class="gt_groupWrapper">
+            <a href="#" class="dealers">Dealers and Distributors</a>
+            <a href="#" class="services">Commercial Services
+                <span class="icon offsite">
+                    <svg class="link-off">
+                        <title>Mobile Navigation close icon</title>
+                        <use xlink:href="imgs/svg/svg.svg#link-off" />
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </div>
+    <footer>
+        <p class="copyright">&copy;&nbsp;2017&nbsp;Pool Pros<a href="#" class="policy">Privacy Policy</a><a href="#" class="terms">Terms and Conditions</a></p>
+    </footer>
+    <div id="contact_modal" class="modal">
+        <div class="contact_form">
+            <h4 class="heading">
+                <span class="title">Email</span>
+                Premium Pools & Spas of Charlotte
+            </h4>
+            <p class="description">Fill out the form below and Premium Pools & Spas of Charlotte will get in touch.
+            </p>
+            <form action="" method="get" class="more_infoForm">
+                <div class="formset">
+                    <label for="userName">First and last name</label>
+                    <input id="userName" class="input_contactForm" type="text" placeholder="Name" pattern="[A-Za-z\s]+" required />
+                    <span class="element_completed">Required<svg class="form-checkBox">
+                            <title>Question mark image to show help</title>
+                            <use xlink:href="imgs/svg/svg.svg#form-checkBox" />
+                        </svg></span>
+                </div>
+                <div class="formset">
+                    <label for="userPhone">Phone number</label>
+                    <input id="userPhone" class="input_contactForm" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx" required />
+                    <span class="element_completed">Required<svg class="form-checkBox">
+                            <title>Question mark image to show help</title>
+                            <use xlink:href="imgs/svg/svg.svg#form-checkBox" />
+                        </svg></span>
+                </div>
+                <div class="formset">
+                    <label for="userEmail">Email address</label>
+                    <input id="userEmail" class="input_contactForm" type="email" placeholder="email@domain" required />
+                    <span class="element_completed">Required<svg class="form-checkBox">
+                            <title>Question mark image to show help</title>
+                            <use xlink:href="imgs/svg/svg.svg#form-checkBox" />
+                        </svg></span>
+                </div>
+                <div class="formset">
+                    <label for="userComments">Comments or questions</label>
+                    <input id="userComments" class="input_contactForm" type="textbox" />
+                    <span class="element_optional">optional</span>
+                </div>
+                <div class="formset">
+                    <p class="question">Do you currently own a pool or spa?</p>
+                    <input type="checkbox" id="yes" name="yes_poolSpa" value="" /><label for="yes">Yes</label>
+                    <input type="checkbox" id="no" name="no_poolSpa" value="" /><label for="no">No</label>
+                    <span class="element_optional">optional</span>
+                </div>
+                <div class="submit_itAll">
+                    <input type="submit" value="Send my email" /><svg class="icon-nextArrow">
+                            <title>Navigation Arrow used for decoration</title>
+                            <use xlink:href="imgs/svg/svg.svg#icon-nextArrow" />
+                        </svg>
+                </div>
+            </form>
+            <div class="fine_print">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus unde optio obcaecati ab dolorem illum molestias, veritatis consequuntur hic beatae facilis iste, ducimus, veniam nihil maxime numquam recusandae in sint.
+            </div>
+            <span class="close_modalIcon">
+               <svg class="icon_xClose">
+                    <title>Modal close icon</title>
+                    <use xlink:href="imgs/svg/svg.svg#icon-closeX" />
+                </svg> 
+            </span>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/add-ons.js"></script>
+</body>
+</html>
