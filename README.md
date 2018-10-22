@@ -1,2 +1,2 @@
 # Pool Pros
-Starter Page for Pool Pro search landing page
+Starter html search landing page for Pool Pros
