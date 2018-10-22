@@ -1,5 +1,7 @@
 jQuery(document).ready(function($){
 
+    svg4everybody(); 
+
     const windowResize = function(){
         var wr = document.body.clientWidth;
         if(wr <= 768){
@@ -12,11 +14,9 @@ jQuery(document).ready(function($){
     $(window).resize(function(){
         windowResize();
     });
-
     windowResize();
     
-
-
+    
     $('.mobileNav__controls').click(function() {
         $(this).toggleClass('active');
         $('.nav.mobile').toggleClass('active');
@@ -36,3 +36,6 @@ jQuery(document).ready(function($){
     });
 
 });
+
+
+

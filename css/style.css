@@ -113,7 +113,17 @@ body.frozen {
   font-size: 0.75em;
   font-weight: 600;
   line-height: 1em;
-  color: #ffffff; }
+  color: #ffffff;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear; }
+
+.global_toolBar .dealers:hover,
+.global_toolBar .services:hover {
+  color: #216DDF; }
+
+.global_toolBar .dealers:hover svg,
+.global_toolBar .services:hover svg {
+  fill: #216DDF; }
 
 .global_toolBar .services {
   position: relative;
@@ -137,7 +147,9 @@ body.frozen {
   left: 5px;
   width: 15px;
   height: 15px;
-  fill: #ffffff; }
+  fill: #ffffff;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear; }
 
 @media only screen and (min-width: 1024px) {
   .global_toolBar {
@@ -444,9 +456,20 @@ body.frozen {
 
 @media only screen and (min-width: 768px) {
   .listing {
-    display: grid;
-    grid-template-areas: "a a";
-    grid-gap: 20px; } }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  @supports (display: grid) {
+    .listing {
+      display: grid;
+      grid-template-areas: "a a";
+      grid-gap: 20px;
+      -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+      justify-content: inherit; } } }
 
 @media only screen and (min-width: 960px) {
   .listing {
@@ -511,6 +534,10 @@ body.frozen {
     width: calc(100% - 20px);
     height: 2px;
     background-color: #ececec; } }
+
+@media only screen and (min-width: 960px) {
+  .browser-safari .detail .heading:after {
+    left: 10px; } }
 
 .detail .phone_contact {
   display: block;
@@ -606,7 +633,16 @@ body.frozen {
   margin-right: auto;
   margin-bottom: 30px;
   margin-left: auto;
-  font-style: normal; }
+  font-style: normal;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear; }
+
+.email_contact .listing_button:hover, .email_contact .listing_button:focus {
+  background-color: #083D8C;
+  color: #ffffff; }
+
+.email_contact .listing_button:hover svg, .email_contact .listing_button:focus svg {
+  fill: #ffffff; }
 
 .email_contact .listing_button svg {
   position: absolute;
@@ -614,7 +650,9 @@ body.frozen {
   left: 17px;
   width: 25px;
   height: 20px;
-  fill: #083D8C; }
+  fill: #083D8C;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear; }
 
 .business_hours {
   margin-bottom: 38px;
@@ -665,7 +703,8 @@ body.frozen {
   top: 2px;
   left: 0;
   width: 15px;
-  height: 15px; }
+  height: 15px;
+  fill: #bebebe; }
 
 p {
   margin: 0;
@@ -773,18 +812,45 @@ ol {
 
 @media only screen and (min-width: 370px) {
   .main-logo {
-    width: 165px; } }
+    width: 165px;
+    height: 40px; } }
+
+@media only screen and (min-width: 768px) {
+  .main-logo {
+    height: 40px; } }
+
+@media only screen and (min-width: 900px) {
+  .main-logo {
+    height: 60px; } }
+
+@media only screen and (min-width: 1024px) {
+  .main-logo {
+    width: 233px; } }
+
+@media only screen and (min-width: 1275px) {
+  .main-logo {
+    width: 485px; } }
 
 .main-logo svg {
   position: relative;
   width: 150px;
-  height: 40px;
+  height: 30px;
   -webkit-transition: all 100ms linear;
   transition: all 100ms linear; }
 
 @media only screen and (min-width: 370px) {
   .main-logo svg {
-    width: 170px; } }
+    width: 170px;
+    height: 100%; } }
+
+@media only screen and (min-width: 1024px) {
+  .main-logo svg {
+    width: 200px; } }
+
+@media only screen and (min-width: 1275px) {
+  .main-logo svg {
+    width: 233px;
+    height: 68px; } }
 
 .findaPro {
   position: relative;
@@ -801,7 +867,16 @@ ol {
   line-height: 32px;
   color: #216ddf;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear; }
+
+.findaPro:hover, .findaPro:focus {
+  background-color: #216ddf;
+  color: #ffffff; }
+
+.findaPro:hover .map-icon, .findaPro:focus .map-icon {
+  fill: #ffffff; }
 
 @media only screen and (min-width: 1024px) {
   .findaPro {
@@ -816,12 +891,14 @@ ol {
   top: 20%;
   left: 4px;
   width: 1.5em;
-  height: 1.5em;
-  fill: #216ddf; }
+  height: 21px;
+  fill: #216ddf;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear; }
 
 @media only screen and (min-width: 1024px) {
   .findaPro .map-icon {
-    top: 23%;
+    top: 26%;
     left: 8px; } }
 
 nav {
@@ -1046,6 +1123,8 @@ nav {
   line-height: 100%; }
 
 @media only screen and (min-width: 768px) {
+  nav {
+    height: 13px; }
   .navElement {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1069,7 +1148,11 @@ nav {
     font-size: 15px;
     font-size: 0.9375em;
     font-weight: 700;
-    color: #083d8c; } }
+    color: #083d8c;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear; }
+  .navLink:hover {
+    color: #216DDF; } }
 
 @media only screen and (min-width: 820px) {
   .navElement {
@@ -1316,7 +1399,8 @@ nav {
   border-radius: 0; }
 
 .formset .input_contactForm:valid + .element_completed .form-checkBox {
-  opacity: 1; }
+  opacity: 1;
+  fill: #4FC19B; }
 
 .formset .element_completed {
   position: absolute;
@@ -1452,6 +1536,7 @@ label[for=no] + .element_optional {
   width: 0px;
   height: 17px;
   opacity: 0;
+  fill: #0bc9c8;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear; }
 
