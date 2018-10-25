@@ -1,2 +1,3 @@
-# Pool Pros
-Starter html search landing page for Pool Pros
+# Project Pool Pros
+
+HTML layout for a search listing/results page. 
