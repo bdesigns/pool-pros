@@ -1,0 +1,144 @@
+
+// ///////////////////////////////////////
+// fonts
+// ///////////////////////////////////////
+$arial: Arial, Helvetica, sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+
+// set font variables
+$primary_font:$open-sans, $arial;
+
+
+// ///////////////////////////////////////
+// set-globals widths
+// ///////////////////////////////////////
+$site_width: 100%;
+$max-width:1275px;
+// $max_site_width: 1180px;
+// $responsive_padding:1.250em;
+$base_fontSize: 100%;
+
+// ///////////////////////////////////////
+// color variable swatches 
+// ///////////////////////////////////////
+$bkgrd-color:#ffffff;
+
+$theme_color:#083D8C;
+
+$header_color:#216DDF;
+
+$text-color:#999999;
+
+$mobile_navControls_color:$theme_color;
+
+$social_color:$theme_color;
+
+$ft_color:$header_color;
+
+
+
+// ///////////////////////////////////////////////
+// media queries = Located in _grid-settings.scss
+// ///////////////////////////////////////////////
+
+// Custom media quere for screen views
+$mw:min-width;
+$maxw:max-width;
+
+@mixin media($direction, $width) {
+	@media only screen and ($direction: $width){
+        @content;
+	}
+}
+
+
+// ///////////////////////////////////////
+// custom mixins
+// ///////////////////////////////////////
+
+// px to rem converter.
+@function get-value($n) {
+    @return $n / ($n * 0 + 1);
+}
+
+// Responsive text reset.
+@mixin font-size($font-size){
+    $base-size: get-value($base_fontSize / 100);
+    $base-px-size: 16 * $base-size;
+    font-size: $font-size;
+    font-size: (get-value($font-size) / $base-px-size) + em;
+}
+
+// Custom timing for animation or have the .2s fallback.
+@mixin animate($timing:.2s){
+    -webkit-transition: all $timing linear;
+    -moz-transition: all $timing linear;
+    -o-transition: all $timing linear;
+    transition: all $timing linear;
+}
+
+// Font smoothing antialias
+@mixin font-smooth{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    // font-smooth: auto;
+}
+
+// Use for image replacement instead of text-indent
+@mixin ir {
+    display: block;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    text-align: left;
+    white-space: nowrap;
+    text-indent: 100%;
+    direction: ltr;
+}
+.ir{
+    @include ir;
+}
+
+// Pseudo-element easy mixin
+@mixin pseudo{
+    content: '';
+    position: absolute;
+    display: block;
+    visibility: visible;
+}
+
+// Clearfix mixin and utility classname
+@mixin clearfix {
+    zoom: 1;
+    &:before, &:after {
+        display: block;
+        visibility: hidden;
+        height: 0;
+        content: '\0020';
+    }
+    &:after {
+        clear: both;
+    }
+}
+.clearfix {
+    @include clearfix;
+}
+.clear {
+    clear: both;
+}
+
+// Hide only visually, but have it available for screenreaders
+@mixin visuallyhidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+.visuallyhidden {
+    @include visuallyhidden;
+}
+
+// Hide visually and from screenreaders, but maintain layout
+@mixin invisible {
+    visibility: hidden;
+}
+.invisible {
+    @include invisible;
+}

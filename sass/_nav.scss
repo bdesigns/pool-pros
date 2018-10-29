@@ -1,0 +1,256 @@
+// ///////////////////////////////////////
+// All nav elements
+// ///////////////////////////////////////
+nav{
+    position: relative;
+}
+
+// ////////////////////////////////////
+// All mobile nav elements
+// activates on class .mobile(view) 
+// & .class active(open) to open/close
+// ////////////////////////////////////
+
+.nav.mobile{
+    height:0;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    overflow:hidden;
+    visibility: hidden;
+    @include animate(400ms);
+    z-index:2;
+    @include media($mw, 768px){
+        display:none;
+    }
+}
+
+.nav.mobile.active{
+    display:block;
+    position:fixed;
+    height:100vh;
+    z-index:4;
+    background-color:#f6f6f6;
+    overflow-y:auto;
+    visibility: visible;
+}
+
+.nav.mobile .navElement{
+    display:none;
+}
+
+.nav.mobile.active .navElement{
+    display:block;
+    border-top:5px solid #0bc9c8;
+    box-shadow: 0px 5px 4.3px 0.7px rgba(0, 0, 0, 0.23);
+    padding-top:88px;
+    @include clearfix;
+    // 
+    // reset for mobile active class attachment    
+    @include media($mw, 768px){
+        height:0; 
+    }
+    &:before{
+        @include pseudo;
+        content:"Menu";
+        top:5px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+        height:90px;
+        background-color:#ffffff;
+        @include font-size(18px);
+        font-weight:700;
+        line-height:1.2;
+        color:#01529e;
+        text-align: center;
+        text-transform:uppercase;         
+    }
+}
+
+.nav.mobile.active .navItem{
+    position: relative;
+    height:75px;
+    background-color:#f6f6f6;
+    border-top:2px solid #ffffff;
+    padding-left:15px;
+    @include media($mw, 680px){
+        text-align:center;
+    }
+    &:hover,
+    &:focus{
+        .navLink{
+            color:#333333;
+        }
+        .icon-nextArrow{
+            right:24px;
+        }
+    }
+}
+
+.nav.mobile.active .navLink{
+    @include font-size(18px);
+    font-weight:600;
+    line-height:75px;
+    color:#666666;
+    z-index:2; 
+    transition: color 200ms linear;      
+}
+
+// ///////////////////////////////////////
+// Mobile icon for nav elements
+// ///////////////////////////////////////
+.nav .icon-nextArrow{
+    display:none;
+}
+.nav.mobile.active .icon-nextArrow{
+    display:block;
+    position: absolute;
+    top:calc(50% - 6.5px);
+    right:28px;
+    width:14px;
+    height:17px;
+    fill:#0bc9c8;
+    z-index:1;
+    @include animate(200ms);
+}
+
+// ///////////////////////////////////////
+// Mobile nav controls
+// ///////////////////////////////////////
+.mobileNav__controls{
+    // @include pseudo;
+    position: relative;
+    top:6px;
+    right:7px;
+    width:51px;
+    height:51px;
+    background-color:#ffffff;
+    box-shadow:0px 2px 5.88px 0.12px hsla(0, 0%, 0%, 0.58);
+    border-radius:50%;
+    cursor: pointer;
+    @include animate(200ms);
+
+    // ///////////////////////////////
+    // Do now show mobile nav icon
+    //////////////////////////////////
+    @include media($mw, 768px){
+        display:none;
+    }
+    span{       
+        position: absolute;
+        top:18px;
+        left:19px;
+        width:18px;
+        height:19px;
+        border-top:3px solid $mobile_navControls_color;
+        opacity:1;
+        cursor: pointer;
+        @include animate(300ms);
+        &:after,
+        &:before{
+            @include pseudo;
+            right:0;
+            height:3px;
+            background-color:$mobile_navControls_color;
+        }
+        &:before{
+            top:4px;
+            width:14px;
+        }
+        &:after{
+            top:11px;
+            width:18px;
+        }
+    }
+    .icon_xClose{
+        display:block;
+        position: absolute;
+        top:20px;
+        right:24px;
+        width:17px;
+        height:17px;
+        fill:#ffffff;
+        transform:rotate(45deg);
+        opacity:0;
+        @include animate(300ms);
+    }
+    &.active{
+        position: relative;
+        background-color:transparent;
+        box-shadow:0px 2px 5.88px 0.12px hsla(0, 0, 100%, 0);
+        span{
+            top:14px;
+            left:16px;
+            border-color:#01c7c6;
+            opacity:0;
+            transform:rotate(-136deg);
+            &:before{
+                background-color:#ffffff;
+            }
+            &:after{
+                top:-2px;
+                left:1px;
+                transform:rotate(-267deg);
+                background-color:#01c7c6;
+            }
+            .icon_xClose{
+                transform:rotate(0deg);
+            }
+        }
+        .icon_xClose{
+            fill:#01c7c6;
+            opacity:1;
+            transform:rotate(0deg);
+        }
+    }
+}
+
+// ///////////////////////////////////////
+// Baseline nav & tablet/desktop view
+// ///////////////////////////////////////
+.navLink{
+    position: relative;
+    display:block;
+    line-height:100%;  
+}
+
+
+@include media($mw, 768px){
+    nav{
+        height:13px;
+    }
+    .navElement{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        width:350px;
+        @include animate(150ms);
+        @include media($mw, 480px){
+            background-position-y: 40px;
+        }
+    }
+    .navLink{
+        @include font-size(15px);
+        font-weight:700;
+        color:$theme_color;
+        @include animate(200ms);
+        &:hover{
+            color:$header_color;
+        }
+    }
+}
+
+@include media($mw, 820px){
+    .navElement{
+        width:385px;
+    }
+}
+
+@include media($mw, 900px){
+    .navElement{
+        width:470px;
+    }
+}

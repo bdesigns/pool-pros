@@ -1,0 +1,283 @@
+// ///////////////////////////////////////
+// Form Modal
+// ///////////////////////////////////////
+
+// create a active class to bring in the modal.
+.modal{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:0%;
+    background-color:rgba(0,0,0,0.5);
+    z-index:7;
+    transition: height 200ms ease;
+    &.open{
+        height:100vh;
+        .contact_form{
+            height:924px;
+        }
+    }
+}
+
+.contact_form{
+    position:fixed;
+    top:50%;
+    left:50%;
+    width:700px;
+    max-width:calc(100% - 26px);
+    height:0;
+    max-height:100%;
+    background-color:#ffffff;
+    transform:translate(-50%, -50%);
+    overflow-y: auto;
+}  
+
+.contact_form .heading{
+    background-color:$theme_color;
+    margin:0;
+    padding:23px 16px 36px;
+    @include font-size(28px);
+    font-weight:400;
+    color:#ffffff;
+    .title{
+        display:block;
+        font-size:0.875rem;
+        font-weight:700;
+        text-transform:uppercase;
+    }   
+}
+
+.contact_form .description{
+    padding:31px 16px;
+    @include font-size(15px);
+    color:#616161;
+}
+
+.more_infoForm{
+    max-width:637px;
+    margin:0 auto;
+    padding:31px 23px;
+    background-color:#f6f6f6;
+}
+
+.modal .close_modalIcon{
+    position:absolute;
+    top:8px;
+    right:15px;
+    cursor: pointer;
+}
+
+.modal .icon_xClose{
+    position:relative;
+    width:13px;
+    height:13px;
+    fill:#ffffff;
+}
+
+
+// ///////////////////////////////////////
+// Modal Form
+// ///////////////////////////////////////
+.formset{
+    position: relative;
+}
+
+.formset label{
+    display:block;
+    margin-bottom:11px;
+    @include font-size(14px);
+    font-weight:700;
+    color:#616161;
+}
+
+.formset .input_contactForm{
+    width:100%;
+    background-color:#ffffff;
+    border:1px solid #d8d8d8;
+    margin-bottom:21px;
+    padding:11px 12px;
+    font-family: $primary_font;
+    @include font-size(15px);
+    color:#616161;
+    // custom set width on phone input tag
+    &#userPhone{
+        width:245px;
+        max-width:100%;
+    }
+    &#userComments{
+        height:78px;
+    }
+    &:valid{
+        + .element_completed{
+            border:0;
+            border-radius:0;
+           .form-checkBox{
+                opacity:1;
+                fill:#4FC19B;
+           }
+        }
+    }
+}
+
+
+.formset .element_completed{
+    position:absolute;
+    top:0;
+    right:0;
+    width:22px;
+    height:22px;
+    border:1px solid #BEBEBE;
+    border-radius:50%;
+    @include ir;
+    @include animate(200ms);
+    .form-checkBox{
+        position: absolute;
+        top:0;
+        left:0;
+        width:22px;
+        height:22px;
+        opacity:0;
+        @include animate(200ms);
+    }
+}
+
+// custom set width on phone input tag
+.formset #userPhone + .element_completed{
+    left:223px;
+    right:100%;;
+    max-width:100%;
+}
+
+.element_optional{
+    position:absolute;
+    top:0;
+    right:0;
+    @include font-size(14px);
+    font-style:italic;
+    color:#BEBEBE;
+
+}
+
+// special case for phones smaller than 380px;
+label[for=no] + .element_optional{
+    position: relative;
+    @include media($mw, 380px){
+        position:absolute;
+        top:0;
+        right:0;
+    }
+}
+
+.question{
+    margin-bottom:18px;
+    @include font-size(14px);
+    font-weight:700;
+    line-height: 1.2;
+    color:#3f3f3f;      
+}
+
+.formset input[type=checkbox]{
+    position: absolute;
+    opacity:0;
+    z-index:1;
+}
+
+.formset input[type=checkbox] + label{
+    display:inline-block;
+    width:63px;
+    height:30px;
+    border:1px solid #000000;
+    background-color:#ffffff;
+    border-radius:3px;
+    margin-right:4px;
+    @include font-size(14px);
+    line-height:28px;
+    text-align: center;
+    color:#3f3f3f;
+    z-index:2;
+    cursor: pointer;
+    // @include animate(200ms);
+    &:hover,
+    &:active{
+        background-color:#01c7c6;
+        border-color:#016b6a;
+        color:#ffffff;
+    }
+    &:active,
+    &:focus{
+        margin-left:1px;
+    }
+}
+
+.formset input[type=checkbox]:checked + label{
+    background-color:#01c7c6;
+    border-color:#016b6a;
+    color:#ffffff;
+}
+
+.submit_itAll{
+    position: relative;
+    border-top:1px solid #ececec;
+    margin-top:20px;
+    padding-top:40px;
+    text-align:right;
+    @include media($mw, 500px){
+        text-align:center;
+    }
+}
+
+.submit_itAll input[type=submit]{
+    background-color:transparent;
+    border:0;
+    @include font-size(15px);
+    font-weight:700;
+    color:#0bc9c8;
+    cursor: pointer;
+    @include animate(200ms);
+    @include media($mw, 500px){
+        color:#3f3f3f;
+    }
+    &:hover{
+        color:#3f3f3f;
+        @include media($mw, 500px){
+        color:#0bc9c8;
+            + .icon-nextArrow{
+                margin-left:1px;
+            }
+        }
+    }
+}
+
+.submit_itAll .icon-nextArrow{
+    position: relative;
+    top:3px;
+    width:0px;
+    height:17px;
+    opacity:0;
+    fill:rgb(11, 201, 200);
+    @include animate(200ms);
+    @include media($mw, 500px){
+        width:14px;
+        opacity:1;
+    }
+}  
+
+.contact_form .fine_print{
+    height:0;
+    background-color:#f6f6f6;
+    margin:0;
+    padding:0;
+    font-size:0;
+    color:#616161;
+    opacity:0;
+    @include animate(200ms);
+    @include media($mw, 500px){
+        height:auto;
+        margin-top:22px;
+        padding:25px 30px;
+        @include font-size(12px);
+        line-height: 1.6;
+        opacity:1;
+    }
+}

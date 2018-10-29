@@ -1,0 +1,161 @@
+// /////////////////////////////////
+// Header with main logo styles
+// /////////////////////////////////
+
+.header{
+    position: relative;
+    height:56px;
+    background-color:#ffffff;
+    box-shadow: 0px 2px 4.3px 0.7px rgba(0, 0, 0, 0.31);
+    margin-bottom:78px;
+    z-index:6;
+    @include animate(200ms);
+    @include media($mw, 480px){
+        margin-bottom:107px;
+    }
+    @include media($mw, 768px){
+        height:101px;
+    }
+    @include media($mw, 1024px){
+        margin-top:41px;
+    }
+    // ///////////////////////////////////////
+    // Header Indexing for media views
+    // ///////////////////////////////////////
+    .main-logo{
+        z-index:3;
+        @include media($mw, 768px){
+            order: 1;
+        }
+    }
+    .findaPro{
+        z-index:3;
+        @include media($mw, 768px){
+            order: 3;
+        }
+    }
+    .nav{
+        z-index:2;
+        @include media($mw, 768px){
+            order: 2;
+        }
+    }
+    .mobileNav__controls{
+        z-index:4;
+    }
+}
+
+.h_groupWrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    max-width:$max-width;
+    height:100%;
+    margin:0 auto;
+    @include media($mw, 768px){
+        padding:0 15px;
+    }
+    @include media($mw, 1024px){
+        padding:0 25px 0 20px;
+    }
+    @include media($mw, $max-width){
+        padding:0;
+    }
+}
+
+
+// /////////////////////////////////////////
+// Header Main Logo SVG image
+// #Pools Pool Logos
+// ///////////////////////////////////////
+.main-logo{
+    position:relative;
+    width:132px;
+    height:36px;
+    margin:0;
+    padding:0;
+    @include animate(200ms);
+    @include media($mw, 370px){
+        width:165px;
+        height:40px;
+    }
+    @include media($mw, 768px){
+        height:40px;
+    }
+    @include media($mw, 900px){
+        height:60px;
+    }
+    @include media($mw, 1024px){
+        width:233px;
+    }
+    @include media($mw, $max-width){
+        width:485px;
+    }
+    svg{
+        position: relative;
+        width:150px;
+        height:30px;
+        @include animate(100ms);
+        @include media($mw, 370px){
+            width:170px;
+            height:100%;
+        }
+        @include media($mw, 1024px){
+            width:200px;
+        }
+        @include media($mw, $max-width){
+            width:233px;
+            height:68px;
+        }
+    }
+}
+
+
+
+// /////////////////////////////////////////
+// header button located by the navigation
+// #Find a Pro Header Button
+.findaPro{
+    position: relative;
+    display:block;
+    width:108px;
+    height:35px;
+    border:2px solid $header_color;
+    border-radius:4px 4px;
+    padding-left:1em;
+    @include font-size(12px);
+    font-weight:700;
+    letter-spacing:0;
+    line-height:32px;
+    color:$header_color;
+    text-align:center;
+    text-transform:uppercase;
+    @include animate(200ms);
+    &:hover,
+    &:focus{
+        background-color:$header-color;
+        color:#ffffff;
+        .map-icon{
+            fill:#ffffff;
+        }
+    }
+    @include media($mw, 1024px){
+        width:147px;
+        height:47px;
+        @include font-size(15px);
+        line-height:41px;
+    }
+    .map-icon{
+        position: absolute;
+        top:20%;
+        left:4px;
+        width:1.5em;
+        height:21px;
+        fill:$header_color;
+        @include animate(200ms);
+        @include media($mw, 1024px){
+            top:26%;
+            left:8px;
+        }
+    }
+}

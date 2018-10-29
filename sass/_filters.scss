@@ -1,0 +1,264 @@
+
+// ///////////////////////////////////////
+// top filter fieldset elements
+// ////////////////////////////////////////
+.search-results{
+    max-width:$max-width;
+    margin:0 auto;
+}
+
+.filters{
+    position: relative;
+    width:100%;
+    max-width:$max-width;
+    height:100%;
+    background-color:#f6f6f6;
+    border-bottom:1px solid #d8d8d8;
+    padding-top:65px;
+    padding-bottom:18px;
+    @include media($mw, 768px){
+        border:0;
+    }
+    @include media($mw, 910px){
+        height:83px;
+        margin:0 auto;
+        padding:16px 0;
+        @include clearfix;
+    }
+    @include media($mw, 960px){
+        width:calc(100% - 15px);
+        border-radius:10px;
+    }
+    @include media($mw, $max-width){
+        width:100%;
+    }
+}
+
+.wrapper_filtersResults{
+    max-width:905px;
+    margin:0 auto;
+}
+
+
+.filters fieldset{
+    position: relative;
+    width:calc(100% - 36px);
+    border:0;
+    margin-left:auto;
+    margin-right:auto;
+    padding:0;
+    @include media($mw, 768px){
+        width:686px;
+    }
+    @include media($mw, 910px){
+        float:right;
+        &:before{
+            @include pseudo;
+            top:0;
+            left:-33px;
+            width:1px;
+            height:55px;
+            background-color:#ececec;
+        }
+    }
+}
+
+.filters legend{
+    position: absolute;
+    top:-46px;
+    right:46px;
+    width:126px;
+    height:46px;
+    background-color:#ffffff;
+    border-top:1px solid #d8d8d8;
+    border-right:1px solid #d8d8d8;
+    border-left:1px solid #d8d8d8;
+    @include font-size(15px);
+    font-weight:700;
+    line-height:44px;
+    text-align:center;
+    color:#3f3f3f;
+    @include media($mw, 768px){
+        top:0;
+        left:0;
+        right:auto;
+        background-color:transparent;
+        border:0;
+        @include font-size(18px);
+    }
+}
+
+.fieldset-titleArrow{
+    position: absolute;
+    top:-1px;
+    right:-47px;
+    width:47px;
+    height:47px;
+    border-top:1px solid #d8d8d8;
+    border-right:1px solid #d8d8d8;
+    @include media($mw, 768px){
+        position: relative;
+        display:none;
+    }
+}
+
+.icon.arrow-down{
+    position:absolute;
+    top:16px;
+    left:15px;
+    width:22px;
+    height:22px;
+    fill:#3F3F3F;
+    @include media($mw, 768px){
+        position: relative;
+        display:none;
+    }
+}
+
+
+// ///////////////////////////////////////
+// Filter Results style block
+// ///////////////////////////////////////
+.filter_list{
+    background-color:#ffffff;
+    border:1px solid #d8d8d8;
+    padding:22px;
+    @include media($mw, 480px){
+        display:flex;
+        flex-wrap:wrap;
+    }
+    @include media($mw, 768px){
+        max-width:510px;
+        background-color:transparent;
+        border:0;
+        margin-left:180px;
+        padding:0;
+    }    
+}
+
+.filter_item{
+    position: relative;
+    height:57px;
+    color:#3f3f3f;
+    @include media($maxw, 479px){
+        &:last-of-type{
+            height:26px;
+        }
+    }
+    @include media($mw, 480px){
+        display:flex;
+        align-items:center;
+        width:50%;
+    }
+    @include media($mw, 600px){
+        width:33%;
+    }
+    @include media($mw, 768px){
+        width:25%;
+        height:46px;
+    }    
+}
+
+.filter_item input[type=checkbox]:checked + label:after{
+    background-color:$header_color;
+    border-color:transparent;
+    box-shadow:0 0 0 0px rgba(33,109,233,0.25);
+    animation:pulse 1.5s normal;
+}
+
+.filter_item label{
+    position: relative;
+    margin-right:14px;
+    margin-left:14px;
+    @include media($mw, 768px){
+        margin-left:12px;
+        @include font-size(12px);
+        line-height:23px;
+    }    
+    &:hover{
+        cursor:pointer;
+    }
+    &:before{
+        @include pseudo;
+        top:9px;
+        left:-29px;
+        width: 7px;
+        height: 7px;
+        background-color:#ffffff;
+        z-index:1;
+    }
+    &:after{
+        @include pseudo;
+        top:0;
+        left:-38px;
+        width: 23px;
+        height: 23px;
+        background-color:#ffffff;
+        border:1px solid #d8d8d8;
+        border-radius:5px;
+        @include animate(200ms);
+    }
+}
+
+// ///////////////////////////////////////
+// Fieldset question mark icon block
+// ///////////////////////////////////////
+.questionMark{
+    position: absolute;
+    top:4px;
+    left:134px;
+    display:block;
+    width:17px;
+    height:17px;
+    background-color: rgb(216, 216, 216);
+    border-radius:2px;
+    @include media($mw, 480px){
+        top:auto;
+    }
+    @include media($mw, 768px){
+        left:108px;
+    }
+}
+.icon-questionMark{
+    position: absolute;
+    top:3px;
+    left:2.3px;
+    width:12px;
+    height:12px;
+    fill:#4883B5;
+    cursor:pointer;
+}
+// fix box local in safari
+.browser-safari .questionMark{
+    top:20px;
+    @include media($mw, 768px){
+        top:15px;
+    }
+}
+
+// ///////////////////////////////////////
+// Searching Listing statement
+// ///////////////////////////////////////
+.filter_listTotals{
+    position: absolute;
+    top:19px;
+    left:20px;
+    display:block;
+    width:130px;
+    font-weight:700;
+    color:$header_color;
+    @include media($mw, 360px){
+        top:31px;
+        width:190px;
+        overflow:hidden;
+    }
+    @include media($mw, 768px){
+        left:45%;
+    }
+    @include media($mw, 910px){
+        float:left;
+        position:relative;
+        top:11px;
+        left:10px;
+    }
+}

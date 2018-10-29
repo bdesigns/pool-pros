@@ -1,0 +1,26 @@
+// ///////////////////////////////////////
+// basic text over-rides
+// ///////////////////////////////////////
+
+p{
+    margin:0;
+    padding:0;
+}
+
+a{
+    text-decoration:none;
+}
+
+.strong{
+    font-weight:bold;
+}
+
+ul,
+ol{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+
+

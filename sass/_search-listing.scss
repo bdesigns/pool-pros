@@ -1,0 +1,250 @@
+// ///////////////////////////////////////
+// Search componant | listing Styles
+// ///////////////////////////////////////
+.listing{
+    width:calc(100% - 36px);
+    margin:0 auto 40px;
+    @include media($mw, 768px){
+        display:flex;
+        justify-content:space-between;
+        @supports (display:grid){
+            display:grid;
+            grid-template-areas:"a a";
+            grid-gap:20px;
+            justify-content: inherit;
+        }
+    }
+    @include media($mw, 960px){
+        grid-template-areas:"a a a";
+    }
+    @include media($mw, $max-width){
+        width:100%;
+    }
+}
+
+.detail{
+    position: relative;
+    max-width:340px;
+    min-height:430px;  
+    background-color:#ffffff;
+    box-shadow: 0px 2px 4.3px 0.7px rgba(0, 0, 0, 0.11);
+    @include media($mw, 380px){
+        margin:20px auto 0;
+        border-radius: 10px;
+    }
+    @include media($mw, 930px){
+        max-width:410px;
+    }
+    .heading{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:262px;
+        height:95px;
+        margin-top:0;
+        padding-top:30px;
+        margin-left:auto;
+        margin-right:auto;     
+        @include font-size(20px);
+        font-weight:300;
+        line-height: 1.2;
+        color:#3f3f3f;
+        text-align: center;
+        @include media($mw, 960px){   
+            height:110px;
+            padding-top:0;
+            &:after{
+                @include pseudo;
+                top:105px;
+                left:auto;
+                right:auto;
+                width:calc(100% - 20px);
+                height:2px;
+                background-color:#ececec;
+            }
+        }
+    }
+}
+// 
+// bug in safari with absolute centering
+@include media($mw, 960px){  
+    .browser-safari .detail .heading:after{
+        left:10px;
+    }
+}
+
+.detail .phone_contact{
+    display:block;
+    position: relative;
+    width:246px;
+    height:36px;
+    background-color:$header_color;
+    border-radius:2px;
+    margin-right:auto;
+    margin-bottom:18px;
+    margin-left:auto;
+    padding-left:41px;
+    @include font-size(18px);
+    font-weight:700;
+    line-height:35px;
+    color:#ffffff;
+    transition: background-color linear 200ms;
+    &:hover,
+    &:focus{
+        background-color:$theme_color;
+    }
+    @include media($mw, 960px){
+        background-color:transparent;
+        @include font-size(26px);
+        color:#3f3f3f;
+        &:hover,
+        &:focus{
+            background-color:transparent;
+            color:$theme_color;
+            .icon-phone{
+                background-color:$theme_color;
+            }
+        }
+    }
+}
+
+.detail .icon-phone{
+    position:absolute;
+    top:4px;
+    left:4px;
+    width:28px;
+    height:28px;
+    background-color:$theme_color;
+    transition: background-color linear 200ms;
+    svg{
+        position: absolute;
+        top:7px;
+        left:7px;
+        width:17px;
+        height:15px;
+        fill:#ffffff;
+    }
+    @include media($mw, 960px){
+        border-radius:100%;
+        background-color:$header_color;
+    }
+}
+
+.detail .phone_contact .tap{
+    margin-right:6px;
+    @include font-size(10px);
+    @include media($mw, 960px){
+        @include visuallyhidden;
+    }
+}
+
+// ///////////////////////////////////////
+// email contact + button
+// ///////////////////////////////////////
+.detail .email_contact{
+    @include font-size(12px);
+    font-style: italic;
+    line-height: 1.2;
+    color: #3f3f3f;
+    text-align: center;  
+}
+
+.button{
+    display:block;
+    width:187px;
+    height:43px;
+    border:1px solid #02c7c6;
+    border-radius:3px;
+    padding-left:29px;
+    font-size:1.250em;
+    color:$theme_color;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;  
+} 
+
+.email_contact .listing_button{
+    position: relative;
+    margin-top:21px;
+    margin-right:auto;
+    margin-bottom:30px;
+    margin-left:auto;
+    font-style:normal;
+    @include animate(200ms);
+    &:hover,
+    &:focus{
+        background-color:$theme_color;
+        color:#ffffff;
+        svg{
+            fill:#ffffff;
+        }
+    }
+    svg{
+        position: absolute;
+        top:calc(100% - 72%);
+        left:17px;
+        width:25px;
+        height:20px;
+        fill:$theme_color;
+        @include animate(200ms);
+    }
+}
+
+// ///////////////////////////////////////
+// business hours elements
+// ///////////////////////////////////////
+.business_hours{
+    margin-bottom:38px;
+    @include font-size(13px);
+    text-align:center;
+    color:#3f3f3f;
+    span{
+        display:block;
+        margin-bottom:1px;
+    }
+    strong{
+        @include font-size(14px);
+    }
+}
+
+// ///////////////////////////////////////
+// bottom filter elements
+// ///////////////////////////////////////
+.pro_filtersList{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    width:100%;
+    height:90px;
+    background-color:#f6f6f6;
+    padding:23px 28px;
+    @include media($mw, 340px){
+        padding-right:38px;
+        padding-left:38px;
+    }
+    @include media($mw, 960px){
+        padding-right:28px;
+        padding-left:28px;
+    }
+    @include media($mw, 981px){
+        padding-right:38px;
+        padding-left:38px;
+    }
+}
+
+.pro_item{
+    position: relative;
+    width:50%;
+    height:30px;
+    padding-left:23px;
+    @include font-size(12px);
+    color:#3f3f3f;
+    svg{
+        position:absolute;
+        top:2px;
+        left:0;
+        width:15px;
+        height:15px;
+        fill:#BEBEBE;
+    }
+}
